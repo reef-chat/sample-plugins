@@ -1,0 +1,44 @@
+{
+  "id": "com.example.reef-voices-multi",
+  "manifest_version": "1",
+  "kind": "voice_profile",
+  "version": "1.0.0",
+  "name": "Voices starter pack",
+  "description": "Three voice profiles: on-device native TTS, Google Cloud TTS/STT, ElevenLabs. No API keys are bundled.",
+  "license": "MIT",
+  "voices": [
+    {
+      "display_name": "Device default",
+      "provider": "native",
+      "tts_rate": 1.0,
+      "tts_pitch": 1.0,
+      "notes": "Uses the OS-provided TTS voice. Free, offline, no setup."
+    },
+    {
+      "display_name": "Google US English",
+      "provider": "google",
+      "tts": {
+        "languageCode": "en-US",
+        "name": "en-US-Neural2-C",
+        "ssmlGender": "FEMALE",
+        "audioEncoding": "MP3",
+        "speakingRate": 1.0
+      },
+      "stt": {
+        "languageCode": "en-US",
+        "model": "latest_long"
+      },
+      "notes": "Bring your own Google Cloud key on install."
+    },
+    {
+      "display_name": "ElevenLabs Rachel",
+      "provider": "elevenlabs",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "tts_model_id": "eleven_multilingual_v2",
+      "tts_output_format": "mp3_44100_128",
+      "stt_model_id": "scribe_v1",
+      "stt_language_code": "en",
+      "notes": "Bring your own ElevenLabs API key on install."
+    }
+  ]
+}

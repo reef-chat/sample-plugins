@@ -1,0 +1,16 @@
+{
+  "id": "com.example.reef-skill-coding-style",
+  "manifest_version": "1",
+  "kind": "skill",
+  "version": "0.3.0",
+  "name": "Coding style",
+  "description": "One skill whose content is built from two markdown files (entries[]), merged in order at pack load.",
+  "license": "MIT",
+  "skills": [
+    {
+      "name": "House style & commits",
+      "description": "TypeScript/React house style plus conventional commit messages.",
+      "entries": ["skills/house-style.md", "skills/commit-messages.md"]
+    }
+  ]
+}

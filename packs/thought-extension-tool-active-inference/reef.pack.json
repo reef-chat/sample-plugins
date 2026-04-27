@@ -1,0 +1,40 @@
+{
+  "id": "com.example.reef-lens-active-inference",
+  "manifest_version": "1",
+  "kind": "thought_extension_tool",
+  "version": "0.1.0",
+  "name": "Active inference tools",
+  "description": "Adds query templates, verification classes, pass criteria, and sensor specs framed around active inference / FEP.",
+  "license": "MIT",
+  "rows": [
+    {
+      "category": "query_template",
+      "id": "free_energy_minimization",
+      "call_when": "User invokes Friston / active inference / free energy framings.",
+      "query_template": "Discuss the topic in terms of variational free-energy minimization vs Bayesian brain accounts."
+    },
+    {
+      "category": "verification_class",
+      "id": "fep_falsifiability",
+      "call_when": "An FEP-style claim needs to be made testable.",
+      "role": "Translate the claim into a falsifiable prediction with a measurable signal.",
+      "example_tools": ["literature_search", "predictive_coding_check"]
+    },
+    {
+      "category": "pass_criterion",
+      "id": "prediction_error_bounded",
+      "call_when": "An agent loop reports prediction error.",
+      "pass_criterion": "Mean absolute prediction error stays below the calibrated baseline for the last N steps.",
+      "subsystem": "perception",
+      "metrics": ["mae", "rolling_window_size"]
+    },
+    {
+      "category": "sensor_spec",
+      "modality": "interoceptive_eda",
+      "call_when": "User mentions arousal, stress, or autonomic signals.",
+      "typical_rate_hz": "4",
+      "primary_role": "Interoceptive arousal proxy for affective state estimation.",
+      "example_metrics": ["scl_baseline", "scr_count_per_min"]
+    }
+  ]
+}

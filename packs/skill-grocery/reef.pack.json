@@ -1,0 +1,17 @@
+{
+  "id": "com.example.reef-skill-grocery",
+  "manifest_version": "1",
+  "kind": "skill",
+  "version": "1.0.0",
+  "name": "Grocery list",
+  "description": "Helps the assistant build, refine, and check off a shared grocery list.",
+  "license": "MIT",
+  "homepage": "https://example.com/reef-skill-grocery",
+  "skills": [
+    {
+      "name": "Grocery list",
+      "description": "Build a shared grocery list across the conversation.",
+      "content": "When the user mentions food, ingredients, or shopping:\n  1. Maintain a single bullet list under the heading \"Grocery list\".\n  2. Group items by store section (Produce, Dairy, Pantry, Frozen, Other).\n  3. Mark items the user has bought with a leading [x]. Keep them in the list.\n  4. When asked, summarize totals (e.g. \"6 items remaining, 2 done\").\n\nNever invent items the user didn't ask for. If unsure, ask before adding."
+    }
+  ]
+}
